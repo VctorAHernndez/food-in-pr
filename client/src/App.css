@@ -21,6 +21,16 @@ header {
 }
 
 /* FILTERS */
+.keyword-input {
+    width: 80% !important;
+    margin: 8px !important;
+}
+
+.filter-selects {
+    margin: 8px !important;
+    width: 150px;
+}
+
 .switch-label {
     color: #808080;
 }
@@ -142,7 +152,6 @@ code {
 /* FOOTER */
 footer {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     text-align: center;
     width: 100vw;
@@ -164,9 +173,16 @@ footer {
     }
 
     #lead-subtitle {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         text-align: center;
         margin-top: 0.5rem;
+        padding: 0 0.8rem;
+    }
+
+    /* FILTERS */
+    .keyword-input,
+    .filter-selects {
+        width: calc(100% - 16px) !important;
     }
 
     /* RESTAURANT LIST */

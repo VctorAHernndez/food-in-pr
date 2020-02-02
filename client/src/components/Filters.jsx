@@ -13,19 +13,6 @@ import {
     isWidthUp,
     withWidth
 } from '@material-ui/core/';
-import { withStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
-
-const styles = theme => ({
-    root: {
-        margin: theme.spacing(1),
-        width: 150
-    },
-    keywords: {
-        margin: theme.spacing(1),
-        width: "80%"
-    }
-});
 
 class Filters extends Component {
 
@@ -41,10 +28,6 @@ class Filters extends Component {
         };
     }
 
-    static propTypes = {
-        classes: PropTypes.object.isRequired
-    };
-
     handleChange(event) {
         if(this.props.firstSearch) this.props.handleFirstSearch();
         const { name, value } = event.target;
@@ -53,7 +36,7 @@ class Filters extends Component {
 
     render() {
 
-        const { classes, isEnglish } = this.props;
+        const { isEnglish } = this.props;
 
         return (
             <div>
@@ -67,7 +50,7 @@ class Filters extends Component {
                     borderColor="grey.300" 
                     borderRadius="borderRadius"
                 >
-                    <FormControl fullWidth className={classes.keywords}>
+                    <FormControl fullWidth className="keyword-input">
                         <TextField
                             name="keyword"
                             value={this.state.keyword}
@@ -89,9 +72,8 @@ class Filters extends Component {
                     borderRadius="borderRadius"
                 >
 
-                    <FormControl 
-                        style={isWidthUp('sm', this.props.width) ? {} : { width: "calc(100% - 16px)"}}
-                        className={classes.root}
+                    <FormControl
+                        className="filter-selects"
                     >
                         <InputLabel>{isEnglish ? "Category" : "Categoría"}</InputLabel>
                         <Select
@@ -113,9 +95,8 @@ class Filters extends Component {
                         </Select>
                     </FormControl>
 
-                    <FormControl 
-                        style={isWidthUp('sm', this.props.width) ? {} : { width: "calc(100% - 16px)"}}
-                        className={classes.root}
+                    <FormControl
+                        className="filter-selects"
                     >
                         <InputLabel>{isEnglish ? "Area" : "Área"}</InputLabel>
                         <Select
@@ -134,9 +115,8 @@ class Filters extends Component {
                         </Select>
                     </FormControl>
                     
-                    <FormControl 
-                        style={isWidthUp('sm', this.props.width) ? {} : { width: "calc(100% - 16px)"}}
-                        className={classes.root}
+                    <FormControl
+                        className="filter-selects"
                     >
                         <InputLabel>{isEnglish ? "Environment" : "Ambiente"}</InputLabel>
                         <Select
@@ -158,7 +138,7 @@ class Filters extends Component {
                     </FormControl>
                     
                     <Hidden smDown>
-                        <FormControl className={classes.root}>
+                        <FormControl className="filter-selects">
                             <InputLabel>{isEnglish ? "Sort by" : "Ordenar por"}</InputLabel>
                             <Select
                                 name="sortField"
@@ -190,4 +170,4 @@ class Filters extends Component {
     }
 }
 
-export default withWidth()(withStyles(styles)(Filters));
+export default withWidth()(Filters);

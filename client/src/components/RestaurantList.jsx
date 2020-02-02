@@ -66,7 +66,7 @@ function RestaurantList(props) {
     } else {
         if(restaurants.length > 0) {
             grid = (
-                <GridList cols={getGridListCols()} style={{maxWidth: "100vw"}}>
+                <GridList cols={getGridListCols()}>
                     {restaurants.map(rest => (
                         <GridListTile
                             title={rest.name}
