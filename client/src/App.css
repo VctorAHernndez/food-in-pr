@@ -1,0 +1,204 @@
+/* GENERAL */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(238, 237, 237);
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* FILTERS */
+.switch-label {
+    color: #808080;
+}
+
+/* RESTAURANT LIST */
+.restaurant-list {
+    min-height: 50vh;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.info-icon {
+    color: white;
+    opacity: 0.7;
+}
+
+.restaurant-img {
+    border: 3px solid #ffffff;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 200ms ease;
+    margin-top: 1rem;
+}
+
+.restaurant-img:hover {
+    box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.3);
+}
+
+#restaurant-card {
+    background-color: #f9f9f9;
+}
+
+#more-info {
+    text-decoration: none;
+}
+
+.doggo-wrapper,
+.spinner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+/* DOGGO */
+.card {
+    width: 275px;
+    height: 200px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: Roboto, Helvetica, Helvecita-Neue, Avenir, sans-serif;
+    color: #555;
+    height: 200px;
+    height: 150px;
+    text-align: center;
+}
+
+.doggo-img {
+    opacity: 0.7;
+    width: 80px;
+}
+
+/* HELPBAR */
+.bottom-navigation {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dialog-content {
+    text-align: center;
+}
+
+.sal-img {
+    border-radius: 50%;
+    width: 30px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: opacity 500ms ease;
+}
+
+.sal-img:hover {
+    opacity: 0.8;
+}
+
+.left-ahem {
+    padding-right: 7px;
+}
+
+.right-ahem {
+    padding-left: 5px;
+}
+
+code {
+    background: #eceff1;
+    color: #555;
+    border-radius: 3px;
+    padding: 1px 3px;
+}
+
+.social-links {
+    transition: color 500ms ease;
+}
+
+.social-links:hover {
+    color: #333;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 50px;
+    padding: 10px;
+    margin: 3rem 0;
+}
+
+#copyright {
+    width: 100%;
+}
+
+/* MEDIA QUERIES (for small screens) */
+@media screen and (max-width: 600px) {
+    
+    /* HEADER */
+    #lead-title {
+        font-size: 2.75rem;
+    }
+
+    #lead-subtitle {
+        font-size: 0.7rem;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    /* RESTAURANT LIST */
+    #restaurant-title {
+        text-align: center;
+    }
+
+    .restaurant-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    #restaurant-description {
+        text-align: center;
+    }
+
+    /* HELP BAR */
+    .bottom-navigation {
+        margin: 3rem auto 0;
+        position: initial;
+        width: 50vw;
+        text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+        margin: 1rem 0;
+    }
+
+    #copyright {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+
+}

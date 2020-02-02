@@ -1,0 +1,13 @@
+{
+  "name": "food-in-pr",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "test.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "heroku-postbuild": "cd server && npm install && cd ../client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
