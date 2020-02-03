@@ -12,6 +12,8 @@ function RestaurantCard(props) {
 
     const {isEnglish, currentRest} = props;
 
+    const treshold = 50; // max. amount of char. in address
+
     const regular = (
         <Card id="restaurant-card">
             <CardContent>
@@ -26,7 +28,7 @@ function RestaurantCard(props) {
                             {currentRest.city ? currentRest.city : "N/A"}
                         </Typography>
                         <Typography variant="body2" color="textSecondary">
-                            {currentRest.address ? currentRest.address : "N/A"}
+                            {currentRest.address ? (currentRest.address.length > treshold ? currentRest.address.substr(0, treshold) + '...' : currentRest.address) : "N/A"}
                         </Typography>
                     </Grid>
                     <Grid item>

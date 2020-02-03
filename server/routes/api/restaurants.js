@@ -53,11 +53,16 @@ function fetchAndServeFromSAL(res, keyword, category, area, environment, sortFie
     // CONSTRUCTION OF REQUEST URL
     const baseURI = "https://www.sal.pr/restaurantes/";
     let fullURL = baseURI + (category ? `${encodeURI(category)}` : "") + "/?";
-    fullURL += 's=' + (keyword ? keyword : '+') + '&';
+    fullURL += 's=' + (keyword ? encodeURI(keyword) : '+') + '&';
     fullURL += (area ? `area=${area}&` : '');
     fullURL += (environment ? `ambiente=${encodeURI(environment)}&` : '');
     fullURL += (sortField ? `field_name=${sortField}&` : '');
     fullURL += 'order=' + (descending === 'true' ? 'd' : 'a');
+
+    // If only keyword is specified, prefer this URL:
+    if(keyword && !category && !area && !environment) {
+        fullURL = `https://www.sal.pr/?s=${keyword}&search=5`;
+    }
 
     // MAKING THE REQUEST
     request(fullURL, (err, response, body) => {
