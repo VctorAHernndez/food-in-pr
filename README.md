@@ -1,6 +1,6 @@
 # Food in PR
 
-Live demo: https://calm-dawn-09607.herokuapp.com
+[Click here](https://food-in-pr.herokuapp.com) for the live demo.
 
 ## Description
 

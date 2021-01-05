@@ -125,6 +125,7 @@ class Filters extends Component {
                             onChange={this.handleChange.bind(this)}
                         >
                             <MenuItem value="">{isEnglish ? "Choose Environment" : "Escoja Ambiente"}</MenuItem>
+                            <Divider />
                             <MenuItem value="Bistro">{isEnglish ? "Bistro" : "Bistró"}</MenuItem>
                             <MenuItem value="Casual">Casual</MenuItem>
                             <MenuItem value="Familiar">{isEnglish ? "Family Friendly" : "Familiar"}</MenuItem>
