@@ -114,7 +114,7 @@ function HelpBar(props) {
                     <Typography variant="h6">
                         {isEnglish ? "Powered by" : "Habilitado por"} 
                         <Link href="https://www.sal.pr" target="_blank" rel="noopener noreferrer">
-                            <img className="sal-img" src="https://scontent.fsig3-1.fna.fbcdn.net/v/t1.0-9/20664770_10150821097674982_3650242597050936832_n.png?_nc_cat=104&_nc_ohc=8k-QPqcs6kEAX_Ab7BQ&_nc_ht=scontent.fsig3-1.fna&oh=a9e90cced8358cfe09d0c5b67d529640&oe=5E9506C4" alt="sal pr"/>
+                            <img className="sal-img" src="https://play-lh.googleusercontent.com/6bYtkNLzJOgRBwpKnNrcxrlyB_LswqiGO1h7inNgbo-QVDiNzRWQLM2FrYPV1sTGZ7o=s360" alt="sal pr"/>
                         </Link>
                     </Typography>
                     <br/>
