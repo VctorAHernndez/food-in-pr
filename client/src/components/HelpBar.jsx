@@ -14,7 +14,7 @@ import {
 } from '@material-ui/core';
 import { 
     GitHub,
-    Twitter,
+    // Twitter,
     Instagram,
     HelpOutline,
     Translate
@@ -154,7 +154,7 @@ function HelpBar(props) {
                     <br/>
                     <Box display="flex" justifyContent="space-around" width="100%">
                         <Link className="social-links" color="textSecondary" href="https://www.github.com/VctorAHernndez" target="_blank" rel="noopener noreferrer"><GitHub /></Link>
-                        <Link className="social-links" color="textSecondary" href="https://www.twitter.com/vctorahernndez" target="_blank" rel="noopener noreferrer"><Twitter /></Link>
+                        {/* <Link className="social-links" color="textSecondary" href="https://www.twitter.com/vctorahernndez" target="_blank" rel="noopener noreferrer"><Twitter /></Link> */}
                         <Link className="social-links" color="textSecondary" href="https://www.instagram.com/naaandesu/" target="_blank" rel="noopener noreferrer"><Instagram /></Link>
                     </Box>
                     <br/>
